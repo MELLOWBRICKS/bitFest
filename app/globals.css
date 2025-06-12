@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 82% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 42 87% 62%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 82% 9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 240 82% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 42 87% 62%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 42 87% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Press Start 2P", cursive;
+  }
+}
+
+.pixel-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='4' height='4' fill='%23f2c14e' fill-opacity='0.1'/%3E%3C/svg%3E");
+}
+
+.hero-gradient {
+  background: linear-gradient(to bottom, rgba(10, 10, 35, 0.8), rgba(10, 10, 35, 0.95));
+}
+
+.pixel-border {
+  box-shadow: 4px 0 0 0 #f2c14e, 0 4px 0 0 #f2c14e, 4px 4px 0 0 #f2c14e, inset 4px 0 0 0 #f2c14e, inset 0 4px 0 0
+    #f2c14e;
+}
+
+.pixel-font {
+  font-family: "Press Start 2P", cursive;
+}
+
+.pixel-text-lg {
+  font-family: "Press Start 2P", cursive;
+}
+
+/* Ensure navbar has proper background */
+.navbar-bg {
+  background-color: #0a0a23;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-bg-scrolled {
+  background-color: rgba(10, 10, 35, 0.95);
+  backdrop-filter: blur(10px);
+}
